@@ -1,16 +1,12 @@
 package ex1_graph;
 
-import java.util.*;
-import java.io.*;
-
 public class Graph_algo {
 
     /*
      Graph_algo's Shortest Path Algorithm
-     The following program gives the shortest path from the source to all other nodes
      */
     private double[][] djMatrix;
-    private int numVerts, numEdges;
+    private int numVerts;
     private double INFINITY = Double.POSITIVE_INFINITY;
     private double[] dijkstraValues;
     private boolean triangle_inequality = true;
@@ -18,9 +14,8 @@ public class Graph_algo {
     public Graph_algo(double[][] adjMatrix, int numVerts, int numEdges) {
         this.dijkstraValues = new double[numVerts];
         this.djMatrix = new double[numVerts][numVerts];
-        this.numEdges = numEdges;
         this.numVerts = numVerts;
-        //copy adjMatrix
+        //copy
         for (int i = 0; i < numVerts; i++) {
             for (int j = 0; j < numVerts; j++) {
                 djMatrix[i][j] = adjMatrix[i][j];
