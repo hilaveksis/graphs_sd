@@ -11,12 +11,10 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            Graph g1 = new Graph("G2000.txt");
-           // Graph g2 = new Graph("G101.txt");
+            Graph graph1 = new Graph("G2000.txt");
             System.out.println("test 1");
-            Test t1 = new Test("test2000.txt", g1);
-           // System.out.println("test 2");
-           // Test t2 = new Test("test101.txt", g2);
+            Test test1 = new Test("test2000.txt", graph1);
+         
         } catch (IOException ex) {
             Logger.getLogger(Graph.class.getName()).log(Level.SEVERE, null, ex);
         }
